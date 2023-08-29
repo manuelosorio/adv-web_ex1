@@ -1,3 +1,8 @@
+node_modules/
 *.psd
 mob-first-ex1_italianJoy.jpg
 desktop_italianJoy.jpg
+prepros.config
+.idea/
+
+remove-me.js

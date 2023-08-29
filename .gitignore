@@ -6,3 +6,5 @@ prepros.config
 .idea/
 
 remove-me.js
+
+.DS_Store

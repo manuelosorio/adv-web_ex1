@@ -1,0 +1,39 @@
+{
+  "name": "adv-web_ex1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "start": "lite-server --no-open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelosorio/adv-web_ex1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manuelosorio/adv-web_ex1/issues"
+  },
+  "homepage": "https://github.com/manuelosorio/adv-web_ex1#readme",
+  "devDependencies": {
+    "@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker",
+    "browser-sync": "^2.29.3",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "css-loader": "^6.8.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.3",
+    "remove-files-webpack-plugin": "^1.5.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "sass": "^1.66.1"
+  }
+}

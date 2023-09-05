@@ -1,0 +1,22 @@
+@use "../../variables"
+@use "../breakpoints/breakpoints" as bp
+@use "./display" as *
+
+@each $property in $display
+  .visibility-#{ $property }
+    display: #{ $property }
+    +bp.breakpoint("xs")
+      &--xs
+        display: #{ $property } !important
+    +bp.breakpoint("sm")
+      &--sm
+        display: #{ $property } !important
+    +bp.breakpoint("md")
+      &--md
+        display: #{ $property } !important
+    +bp.breakpoint("lg")
+      &--lg
+        display: #{ $property } !important
+    +bp.breakpoint("xl")
+      &--xl
+        display: #{ $property } !important

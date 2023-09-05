@@ -1,0 +1,6 @@
+@use "../../variables"
+$breakpoint-map: ("xs": variables.$breakpoint-x-small, "sm": variables.$breakpoint-small, "md": variables.$breakpoint-medium, "lg": variables.$breakpoint-large, "xl": variables.$breakpoint-large)
+
+=breakpoint($breakpoint: string)
+  @media (min-width: map-get($breakpoint-map, $breakpoint))
+    @content

@@ -1,7 +1,13 @@
 const path = require('path');
+const glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemovePlugin = require('remove-files-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const {PurgeCSSPlugin} = require('purgecss-webpack-plugin')
+
+const PATHS = {
+  src: path.resolve(__dirname),
+};
 
 module.exports = {
   mode: 'development', // Change to 'production' for production build
@@ -23,7 +29,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true, // Enable source map
+              sourceMap: false, // Enable source map
             },
           },
           {
@@ -68,5 +74,13 @@ module.exports = {
       port: 3000,
       server: { baseDir: ['./'] }
     }),
+    new PurgeCSSPlugin({
+      paths: glob.sync([
+        path.join(__dirname, 'index.html'),
+        path.join(__dirname, 'styles/**/*.css')
+      ],
+        { nodir: true },
+        { ignore: ['node_modules'] }),
+    })
   ],
 };

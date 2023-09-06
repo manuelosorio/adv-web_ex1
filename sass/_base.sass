@@ -1,5 +1,6 @@
 @use "variables"
-
+@use "utils"
+@use "sass:list"
 *
   box-sizing: border-box
   &:before, &:after
@@ -7,4 +8,27 @@
 html
   font-size: 100%
 body
-  color: variables.$black
+  font: variables.$f-weight--light variables.$f-size--small variables.$open-sans
+  line-height: 1.5
+  color: variables.$c-black
+img
+  max-width: 100%
+  height: auto
+.skip-navigation
+  position: absolute
+  top: 0
+  left: 0
+  width: 1px
+  height: 1px
+  padding: 0
+  overflow: hidden
+  &:focus
+    height: fit-content
+    width: fit-content
+    padding: 1rem
+    overflow: visible
+    outline: solid 2px variables.$c-black
+    background: variables.$c-silver
+    &:hover
+      background: variables.$c-black
+      color: variables.$c-silver

@@ -6,5 +6,8 @@ prepros.config
 .idea/
 
 remove-me.js
+remove-me.js.map
+
+comp-screeenshots/
 
 .DS_Store

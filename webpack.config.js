@@ -2,8 +2,10 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemovePlugin = require('remove-files-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
 module.exports = {
-  mode: 'production', // Change to 'production' for production build
+  mode: 'development', // Change to 'production' for production build
+  devtool: 'source-map', // Enable source maps
   entry: path.resolve(__dirname, 'sass', 'styles.sass'), // Update this to the path to your actual Sass file
   output: {
     filename: 'remove-me.js', // This JS file will be removed
@@ -18,7 +20,12 @@ module.exports = {
         test: /\.sass$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true, // Enable source map
+            },
+          },
           {
             loader: 'postcss-loader',
             options: {
@@ -27,9 +34,15 @@ module.exports = {
                   require('@hail2u/css-mqpacker')() // consolidate media queries
                 ],
               },
+              sourceMap: true, // Enable source map
             },
           },
-          'sass-loader'
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true, // Enable source map
+            },
+          },
         ],
       },
     ],

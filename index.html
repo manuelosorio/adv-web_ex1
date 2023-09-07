@@ -7,8 +7,14 @@
     <title>Manuel Osorio - Mobile First</title>
   </head>
   <body>
-    <a href="#content" class="skip-navigation">Skip Navigation</a>
-    <nav><img src="" alt="">
+    <a href="#header" class="skip-navigation">Skip to Header</a>
+    <a href="#content" class="skip-navigation">Skip to Main Content</a>
+    <a href="#footer" class="skip-navigation">Skip to Footer</a>
+
+    <nav>
+      <div class="logo">
+        <a href="index.html" aria-label=""><img src="./image/logo.png" alt="Italian Joy Restaurant Logo"></a>
+      </div>
       <ul>
         <li>
           <a href="#">Home</a>
@@ -39,7 +45,7 @@
       </ul>
     </nav>
     <header class="hero">
-      <div class="hero__container" id="content">
+      <div class="hero__container" id="header">
         <h1>
           All the Pasta You Care To Eat!
         </h1>
@@ -50,54 +56,56 @@
         <a href="" class="hero__cta">Order Now</a>
       </div>
     </header>
-    <section class="card__wrapper">
-      <div class="card">
-        <img src="image/pizza-icon.jpg" alt="Icon of Pizza with a Slice" class="card__image">
-        <div class="card__content">
-          <h3>The finest ingredients</h3>
-          <p>Italian Joy Restaurant is a place that takes pride in the fresh ingredients that make up our tasty dishes.</p>
-          <a href="#">Learn More</a>
+    <main id="content">
+      <section class="card__wrapper">
+        <div class="card">
+          <img src="image/pizza-icon.jpg" alt="Icon of Pizza with a Slice" class="card__image">
+          <div class="card__content">
+            <h3>The finest ingredients</h3>
+            <p>Italian Joy Restaurant is a place that takes pride in the fresh ingredients that make up our tasty dishes.</p>
+            <a href="#">Learn More</a>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./image/delivery-icon.png" alt="Icon of a Delivery Scooter" class="card__image">
-        <div class="card__content">
-          <h3>The quickest delivery</h3>
-          <p>Order online today and have hot, fresh delicious Italian food delivered right to your front door</p>
-          <a href="#">Learn More</a>
+        <div class="card">
+          <img src="./image/delivery-icon.png" alt="Icon of a Delivery Scooter" class="card__image">
+          <div class="card__content">
+            <h3>The quickest delivery</h3>
+            <p>Order online today and have hot, fresh delicious Italian food delivered right to your front door</p>
+            <a href="#">Learn More</a>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="image/menu-icon.png" alt="Icon of a plate with a fork and knife" class="card__image visibility-none visibility-flex--md">
-        <div class="card__content">
-          <h3>The best menu</h3>
-          <p>Our menu of pasta, pizza and Italian cuisine handmade with love, from scratch, daily.</p>
-          <a href="#">Learn More</a>
+        <div class="card">
+          <img src="image/menu-icon.png" alt="Icon of a plate with a fork and knife" class="card__image visibility-none visibility-flex--md">
+          <div class="card__content">
+            <h3>The best menu</h3>
+            <p>Our menu of pasta, pizza and Italian cuisine handmade with love, from scratch, daily.</p>
+            <a href="#">Learn More</a>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="ad visibility-block visibility-none--md">
-      <img src="./image/pizza_ad.jpg" alt="">
-      <div class="ad__content">
-        <h3>Large pizza with unlimited toppings</h3>
-        <p>$12.99</p>
-      </div>
-    </section>
-    <section class="visibility-block visibility-none--md">
-      <h3>Our Locations</h3>
-      <img src="./image/map.jpg" alt="Map for location of Italian Joy Restaurant">
-    </section>
-    <section class="gallery-wrapper visibility-none">
-      <img src="./image/pizza-1.jpg" alt="Pizza">
-      <img src="./image/wine.jpg" alt="Wine glasses">
-      <img src="./image/pizza-2.jpg" alt="Pizza">
-      <img src="./image/charcuterie.jpg" alt="Charcuterie board">
-      <img src="./image/charcuterie.jpg" alt="Charcuterie board">
-      <img src="./image/pizza-2.jpg" alt="Pizza">
-      <img src="./image/wine.jpg" alt="Wine glasses">
-      <img src="./image/pizza-1.jpg" alt="Pizza">
-    </section>
-    <footer>
+      </section>
+      <section class="ad visibility-block visibility-none--md">
+        <img src="./image/pizza_ad.jpg" alt="">
+        <div class="ad__content">
+          <h3>Large pizza with unlimited toppings</h3>
+          <p>$12.99</p>
+        </div>
+      </section>
+      <section class="visibility-block visibility-none--md">
+        <h3>Our Locations</h3>
+        <img src="./image/map.jpg" alt="Map for location of Italian Joy Restaurant">
+      </section>
+      <section class="gallery-wrapper visibility-none">
+        <img src="./image/pizza-1.jpg" alt="Pizza">
+        <img src="./image/wine.jpg" alt="Wine glasses">
+        <img src="./image/pizza-2.jpg" alt="Pizza">
+        <img src="./image/charcuterie.jpg" alt="Charcuterie board">
+        <img src="./image/charcuterie.jpg" alt="Charcuterie board">
+        <img src="./image/pizza-2.jpg" alt="Pizza">
+        <img src="./image/wine.jpg" alt="Wine glasses">
+        <img src="./image/pizza-1.jpg" alt="Pizza">
+      </section>
+    </main>
+    <footer id="footer">
       <div class="mailing-list">
         <h3>Join our mailing list</h3>
         <form action="">
@@ -121,5 +129,6 @@
         </div>
       </div>
     </footer>
+    <script src="https://kit.fontawesome.com/f14f2eae29.js" crossorigin="anonymous"></script>
   </body>
 </html>

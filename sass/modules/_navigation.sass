@@ -1,0 +1,21 @@
+@use "../utils"
+.nav
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  position: relative
+  //max-height: 6.25rem
+  &__links
+    display: flex
+    flex-direction: column
+    justify-content: center
+    li
+      //height: 0
+    +utils.breakpoint('md')
+      flex-direction: row
+  &__social
+    display: flex
+    justify-content: center
+    align-items: center
+    +utils.breakpoint('md')
+      justify-content: flex-end

@@ -49,14 +49,14 @@
     </nav>
     <header class="hero">
       <div class="hero__container" id="header">
-        <h1>
+        <h1 id="hero-heading">
           All the Pasta You Care To Eat!
         </h1>
-        <h2>
+        <h2 id="hero-subheading">
           Starting from
-          <span class="hero__price" >$8.99</span>
+          <span class="hero__price" id="hero-price">$8.99</span>
         </h2>
-        <a href="" class="hero__cta">Order Now</a>
+        <a href="" class="hero__cta" aria-labelledby="hero-heading hero-subheading" role="button">Order Now</a>
       </div>
     </header>
     <main id="content">
@@ -66,7 +66,7 @@
           <div class="card__content">
             <h3>The finest ingredients</h3>
             <p>Italian Joy Restaurant is a place that takes pride in the fresh ingredients that make up our tasty dishes.</p>
-            <a href="#">Learn More</a>
+            <a href="#" aria-label="Learn more about our finest ingredients">Learn More</a>
           </div>
         </div>
         <div class="card">
@@ -74,7 +74,7 @@
           <div class="card__content">
             <h3>The quickest delivery</h3>
             <p>Order online today and have hot, fresh delicious Italian food delivered right to your front door</p>
-            <a href="#">Learn More</a>
+            <a href="#" aria-label="Learn more out online delivery service">Learn More</a>
           </div>
         </div>
         <div class="card">
@@ -82,7 +82,7 @@
           <div class="card__content">
             <h3>The best menu</h3>
             <p>Our menu of pasta, pizza and Italian cuisine handmade with love, from scratch, daily.</p>
-            <a href="#">Learn More</a>
+            <a href="#" aria-label="Learn more about our menu">Learn More</a>
           </div>
         </div>
       </section>
@@ -93,19 +93,19 @@
           <p>$12.99</p>
         </div>
       </section>
-      <section class="visibility-block visibility-none--md">
+      <section class="location visibility-block visibility-none--md">
         <h3>Our Locations</h3>
         <img src="./image/map.jpg" alt="Map for location of Italian Joy Restaurant">
       </section>
       <section class="gallery-wrapper visibility-none">
-        <img src="./image/pizza-1.jpg" alt="Pizza">
-        <img src="./image/wine.jpg" alt="Wine glasses">
-        <img src="./image/pizza-2.jpg" alt="Pizza">
-        <img src="./image/charcuterie.jpg" alt="Charcuterie board">
-        <img src="./image/charcuterie.jpg" alt="Charcuterie board">
-        <img src="./image/pizza-2.jpg" alt="Pizza">
-        <img src="./image/wine.jpg" alt="Wine glasses">
-        <img src="./image/pizza-1.jpg" alt="Pizza">
+        <img class="gallery__item" src="./image/pizza-1.jpg" alt="Pizza">
+        <img class="gallery__item" src="./image/wine.jpg" alt="Wine glasses">
+        <img class="gallery__item" src="./image/pizza-2.jpg" alt="Pizza">
+        <img class="gallery__item" src="./image/charcuterie.jpg" alt="Charcuterie board">
+        <img class="gallery__item" src="./image/charcuterie.jpg" alt="Charcuterie board">
+        <img class="gallery__item" src="./image/pizza-2.jpg" alt="Pizza">
+        <img class="gallery__item" src="./image/wine.jpg" alt="Wine glasses">
+        <img class="gallery__item" src="./image/pizza-1.jpg" alt="Pizza">
       </section>
     </main>
     <footer id="footer">
@@ -114,7 +114,7 @@
         <form action="">
           <label for="email">Email Address</label>
           <input type="email" placeholder="Email Address" id="email">
-          <input type="submit" value="Sign Up">
+          <input type="submit" value="Sign Up" aria-label="Sign up to our mailing list">
         </form>
         <div>
           <h3>Italian Joy Restaurant</h3>

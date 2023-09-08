@@ -5,18 +5,18 @@
 @each $property in $display
   .visibility-#{ $property }
     display: #{ $property }
-    +bp.breakpoint("xs")
+    +bp.breakpoint-min("xs")
       &--xs
         display: #{ $property }
-    +bp.breakpoint("sm")
+    +bp.breakpoint-min("sm")
       &--sm
         display: #{ $property }
-    +bp.breakpoint("md")
+    +bp.breakpoint-min("md")
       &--md
         display: #{ $property }
-    +bp.breakpoint("lg")
+    +bp.breakpoint-min("lg")
       &--lg
         display: #{ $property }
-    +bp.breakpoint("xl")
+    +bp.breakpoint-min("xl")
       &--xl
         display: #{ $property }

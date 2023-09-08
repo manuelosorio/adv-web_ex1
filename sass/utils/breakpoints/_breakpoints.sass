@@ -1,6 +1,12 @@
 @use "../../variables"
 $breakpoint-map: ("xs": variables.$breakpoint-x-small, "sm": variables.$breakpoint-small, "md": variables.$breakpoint-medium, "lg": variables.$breakpoint-large, "xl": variables.$breakpoint-large)
 
-=breakpoint($breakpoint: string)
+=breakpoint-min($breakpoint: string)
   @media (min-width: map-get($breakpoint-map, $breakpoint))
+    @content
+=breakpoint-max($breakpoint: string)
+  @media (max-width: map-get($breakpoint-map, $breakpoint))
+    @content
+=breakpoint-between($breakpoint-min: string, $breakpoint-max: string)
+  @media (min-width: map-get($breakpoint-map, $breakpoint-min)) and (max-width: map-get($breakpoint-map, $breakpoint-max))
     @content

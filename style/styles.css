@@ -33,6 +33,7 @@ body {
   font: 300 1rem "Open Sans", sans-serif;
   line-height: 1.5;
   color: #303030;
+  background: #fcfcfc;
 }
 
 img {
@@ -85,16 +86,64 @@ a:hover {
   justify-content: space-evenly;
   align-items: center;
   position: relative;
+  width: 90%;
+  max-width: 87.5rem;
+  margin: auto;
+  flex-direction: column;
+}
+.nav__group {
+  display: flex;
+  width: 100%;
+}
+.nav__group--left {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.nav__group--right, .nav__links {
+  height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: height 500ms ease-in-out;
+}
+.nav__hamburger {
+  font-size: 2.25rem;
+  opacity: 0.5;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+.nav__hamburger:hover {
+  opacity: 1;
 }
 .nav__links {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 0;
+  overflow: hidden;
+  transition: height 500ms ease-in-out;
+}
+.nav__links li {
+  position: relative;
+  top: -600px;
+  transition: 300ms ease-in-out;
 }
 .nav__social {
+  flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: -600px;
+  transition: height 500ms ease-in-out;
+}
+.nav__social li {
+  position: relative;
+  top: -600px;
+  transition: 300ms ease-in-out;
 }
 @media (min-width: 768px) {
   .visibility-flex--md {
@@ -103,11 +152,98 @@ a:hover {
   .visibility-none--md {
     display: none;
   }
-  .nav__links {
+}
+@media (min-width: 992px) {
+  .visibility-none--lg {
+    display: none;
+  }
+  .nav {
     flex-direction: row;
   }
+  .nav__group--left {
+    padding: 0;
+    flex-basis: 15%;
+  }
+  .nav__group--right, .nav__links {
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: none;
+  }
+  .nav__links {
+    flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+  }
+  .nav__links li {
+    top: 0;
+    transition: none;
+    height: fit-content;
+    width: fit-content;
+    background: #fcfcfc;
+  }
   .nav__social {
+    top: 0;
+    transition: none;
     justify-content: flex-end;
+  }
+  .nav__social li {
+    top: 0;
+    transition: none;
+  }
+}
+@media (max-width: 992px) {
+  .nav__checkbox[type=checkbox]:checked ~ .nav__group--right, .nav__checkbox[type=checkbox]:checked ~ .nav__links {
+    height: 30rem;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__hamburger {
+    transform: rotate(90deg);
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__links {
+    height: 30rem;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__links li {
+    top: 0;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__links li:nth-child(1) {
+    transition-delay: 75ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__links li:nth-child(2) {
+    transition-delay: 150ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__links li:nth-child(3) {
+    transition-delay: 225ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__links li:nth-child(4) {
+    transition-delay: 300ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__links li:nth-child(5) {
+    transition-delay: 375ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__links li:nth-child(6) {
+    transition-delay: 450ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__links li:nth-child(7) {
+    transition-delay: 525ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__links li:nth-child(8) {
+    transition-delay: 600ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__social {
+    top: 0;
+    transition-delay: 600ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__social li {
+    top: 0;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__social li:nth-child(1) {
+    transition-delay: 650ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__social li:nth-child(2) {
+    transition-delay: 700ms;
+  }
+  .nav__checkbox[type=checkbox]:checked ~ div .nav__social li:nth-child(3) {
+    transition-delay: 750ms;
   }
 }
 

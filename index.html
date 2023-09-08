@@ -12,40 +12,32 @@
     <a href="#footer" class="skip-navigation">Skip to Footer</a>
 
     <nav class="nav">
-      <div class="nav__logo">
-        <a href="index.html" aria-label=""><img src="./image/logo.png" alt="Italian Joy Restaurant Logo"></a>
+      <input type="checkbox" class="nav__checkbox visibility-none" aria-hidden="true" id="nav-toggle">
+<!--      <input type="checkbox" class="visibility-none" aria-hidden="true" id="nav-toggle">-->
+      <div class="nav__group nav__group--left">
+        <div class="nav__logo">
+          <a href="index.html" aria-label=""><img src="./image/logo.png" alt="Italian Joy Restaurant Logo"></a>
+        </div>
+        <label for="nav-toggle" class="nav__hamburger visibility-block visibility-none--lg">
+          <i class="fas fa-bars"></i>
+        </label>
       </div>
-      <div class="nav__hamburger visibility-block visibility-none--md">
-        <i class="fas fa-bars"></i>
+      <div class="nav__group nav__group--right">
+        <ul class="nav__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Reservations</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">The blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="nav__social">
+          <li><a href="https://yelp.com" target="_blank"><img src="./image/yelp-icon.png" alt="Yelp Icon"></a></li>
+          <li><a href="https://twitter.com" target="_blank"><img src="./image/twitter-icon.png" alt="Twitter Icon"></a></li>
+          <li><a href="https://facebook.com" target="_blank"><img src="./image/fb-icon.png" alt="Facebook Icon"></a></li>
+        </ul>
       </div>
-      <ul class="nav__links">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Menu</a>
-        </li>
-        <li>
-          <a href="#">Reservations</a>
-        </li>
-        <li>
-          <a href="#">Reviews</a>
-        </li>
-        <li>
-          <a href="#">About Us</a>
-        </li>
-        <li>
-          <a href="#">The blog</a>
-        </li>
-        <li>
-          <a href="#">Contact Us</a>
-        </li>
-      </ul>
-      <ul class="nav__social">
-        <li><a href="https://yelp.com" target="_blank"><img src="./image/yelp-icon.png" alt="Yelp Icon"></a></li>
-        <li><a href="https://twitter.com" target="_blank"><img src="./image/twitter-icon.png" alt="Twitter Icon"></a></li>
-        <li><a href="https://facebook.com" target="_blank"><img src="./image/fb-icon.png" alt="Facebook Icon"></a></li>
-      </ul>
     </nav>
     <header class="hero">
       <div class="hero__container" id="header">

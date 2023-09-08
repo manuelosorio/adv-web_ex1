@@ -145,12 +145,31 @@ a:hover {
   top: -600px;
   transition: 300ms ease-in-out;
 }
+.hero {
+  width: 100%;
+  background: url(../1aac4380532e719ce2ac.jpg) no-repeat center center;
+}
+.hero__container {
+  width: 35%;
+  max-width: 40ch;
+  min-height: 765px;
+  background-color: rgba(48, 48, 48, 0.9);
+  color: #EDEDED;
+}
+.hero__heading {
+  font: 200 4.6875rem/1.5 "Oswald", sans-serif;
+  text-align: end;
+  margin-bottom: 20px;
+}
 @media (min-width: 768px) {
   .visibility-flex--md {
     display: flex;
   }
   .visibility-none--md {
     display: none;
+  }
+  .hero__container {
+    padding: 1.5rem 3.125rem;
   }
 }
 @media (min-width: 992px) {

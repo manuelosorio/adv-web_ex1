@@ -1,0 +1,19 @@
+@use "../variables"
+@use "../utils"
+$heading-size: utils.rem(75)
+.hero
+  width: 100%
+  background: url('../image/hero.jpg') no-repeat center center
+  &__container
+    width: 35%
+    max-width: 40ch
+    min-height: 765px
+    background-color: rgba(variables.$c-black, 0.90)
+    color: variables.$c-silver
+    +utils.breakpoint-min('md')
+      padding: 1.5rem utils.rem(50)
+
+  &__heading
+    font: variables.$f-weight--extra-light #{$heading-size}/1.5 variables.$oswald
+    text-align: end
+    margin-bottom: 20px

@@ -180,7 +180,17 @@ a:hover {
     transition: none;
     height: fit-content;
     width: fit-content;
-    background: #fcfcfc;
+    position: relative;
+  }
+  .nav__links li:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    color: #575757;
+    font-size: 1em;
+    font-weight: 200;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .nav__social {
     top: 0;

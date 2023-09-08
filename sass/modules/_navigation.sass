@@ -65,7 +65,17 @@
         transition: none
         height: fit-content
         width: fit-content
-        background: variables.$c-background
+        //background: variables.$c-background
+        position: relative
+        &:not(:last-child)::after
+          content: "|"
+          position: absolute
+          right: 0
+          color: variables.$c-grey
+          font-size: 1em
+          font-weight: 200
+          top: 50%
+          transform: translateY(-50%)
   &__social
     flex-direction: row
     display: flex

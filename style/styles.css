@@ -145,21 +145,63 @@ a:hover {
   top: -600px;
   transition: 300ms ease-in-out;
 }
+.button, .hero__cta {
+  padding: 0.75em 2em;
+  font: 400 1.1rem/1.25 "Open Sans", sans-serif;
+  color: #fcfcfc;
+  background: #E74C3C;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+.button:hover, .hero__cta:hover {
+  background: #575757;
+}
+ .hero__cta {
+  background: transparent;
+  border: 3px solid #EDEDED;
+  color: #EDEDED;
+}
+ .hero__cta:hover {
+  background: #EDEDED;
+  color: #303030;
+}
+
 .hero {
   width: 100%;
   background: url(../1aac4380532e719ce2ac.jpg) no-repeat center center;
+  background-size: cover;
 }
 .hero__container {
-  width: 35%;
-  max-width: 40ch;
-  min-height: 765px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 35ch;
   background-color: rgba(48, 48, 48, 0.9);
   color: #EDEDED;
+  padding: 4.5rem 3.125rem;
 }
 .hero__heading {
-  font: 200 4.6875rem/1.5 "Oswald", sans-serif;
+  --headingSize: 2.5rem;
+  font: 200 var(--headingSize)/1.2 "Oswald", sans-serif;
   text-align: end;
-  margin-bottom: 20px;
+}
+.hero__subheading {
+  display: flex;
+  flex-direction: column;
+  --subheadingSize: 0.75rem;
+  font: 300 var(--subheadingSize)/3.75 "Open Sans", sans-serif;
+  text-align: end;
+}
+.hero__price {
+  --priceSize: 4.5625rem;
+  font: 200 var(--priceSize)/0.6 "Oswald", sans-serif;
+}
+.hero__price span {
+  font-size: 0.5em;
+  vertical-align: super;
+}
+.hero__cta {
+  margin-block-start: 3.5rem;
 }
 @media (min-width: 768px) {
   .visibility-flex--md {
@@ -169,7 +211,17 @@ a:hover {
     display: none;
   }
   .hero__container {
+    width: 40ch;
     padding: 1.5rem 3.125rem;
+  }
+  .hero__heading {
+    --headingSize: 4.6875rem;
+  }
+  .hero__subheading {
+    --subheadingSize: 1rem;
+  }
+  .hero__price {
+    --priceSize: 5.625rem;
   }
 }
 @media (min-width: 992px) {

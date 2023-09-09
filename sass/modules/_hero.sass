@@ -1,19 +1,49 @@
 @use "../variables"
 @use "../utils"
-$heading-size: utils.rem(75)
+@use "button"
 .hero
   width: 100%
   background: url('../image/hero.jpg') no-repeat center center
+  background-size: cover
   &__container
-    width: 35%
-    max-width: 40ch
-    min-height: 765px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    width: 35ch
     background-color: rgba(variables.$c-black, 0.90)
     color: variables.$c-silver
+    padding: 4.5rem utils.rem(50)
     +utils.breakpoint-min('md')
+      width: 40ch
       padding: 1.5rem utils.rem(50)
-
   &__heading
-    font: variables.$f-weight--extra-light #{$heading-size}/1.5 variables.$oswald
+    $headingSize: utils.rem(40)
+    --headingSize: #{$headingSize}
+    font: variables.$f-weight--extra-light var(--headingSize)/1.2 variables.$oswald
     text-align: end
-    margin-bottom: 20px
+    +utils.breakpoint-min('md')
+      $headingSize: utils.rem(75)
+      --headingSize: #{$headingSize}
+  &__subheading
+    display: flex
+    flex-direction: column
+    $subheadingSize: utils.rem(12)
+    --subheadingSize: #{$subheadingSize}
+    font: variables.$f-weight--light var(--subheadingSize)/3.75 variables.$open-sans
+    text-align: end
+    +utils.breakpoint-min('md')
+      $subheadingSize: utils.rem(30)
+      --subheadingSize: 1rem
+  &__price
+    $priceSize: utils.rem(73)
+    --priceSize: #{$priceSize}
+    font: variables.$f-weight--extra-light var(--priceSize)/0.6 variables.$oswald
+    span
+      font-size: 0.5em
+      vertical-align: super
+    +utils.breakpoint-min('md')
+      $priceSize: utils.rem(90)
+      --priceSize: #{$priceSize}
+  &__cta
+    @extend .button--outline
+    margin-block-start: 3.5rem

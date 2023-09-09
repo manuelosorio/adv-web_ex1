@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Manuel Osorio - Mobile First</title>
+  </head>
+  <body>
+    <a href="#header" class="skip-navigation">Skip to Header</a>
+    <a href="#content" class="skip-navigation">Skip to Main Content</a>
+    <a href="#footer" class="skip-navigation">Skip to Footer</a>
+
+    <nav class="nav">
+      <input type="checkbox" class="nav__checkbox visibility-none" aria-hidden="true" id="nav-toggle">
+      <div class="nav__group nav__group--left">
+        <div class="nav__logo">
+          <a href="index.html" aria-label=""><img src="./images/logo.png" alt="Italian Joy Restaurant Logo"></a>
+        </div>
+        <label for="nav-toggle" class="nav__hamburger visibility-block visibility-none--lg">
+          <i class="fas fa-bars"></i>
+        </label>
+      </div>
+      <div class="nav__group nav__group--right">
+        <ul class="nav__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Reservations</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">The blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="nav__social">
+          <li><a href="https://yelp.com" target="_blank"><img src="./images/yelp-icon.png" alt="Yelp Icon"></a></li>
+          <li><a href="https://twitter.com" target="_blank"><img src="./images/twitter-icon.png" alt="Twitter Icon"></a></li>
+          <li><a href="https://facebook.com" target="_blank"><img src="./images/fb-icon.png" alt="Facebook Icon"></a></li>
+        </ul>
+      </div>
+    </nav>
+    <header class="hero">
+      <div class="hero__container" id="header">
+        <h1 id="hero-heading" class="hero__heading">
+          All the Pasta You Care To Eat!
+        </h1>
+        <h2 id="hero-subheading" class="hero__subheading">
+          Starting from
+          <span class="hero__price" id="hero-price">$8<span>.99</span></span>
+        </h2>
+        <a href="" class="hero__cta" aria-labelledby="hero-heading hero-subheading" role="button">Order Now</a>
+      </div>
+    </header>
+    <main id="content">
+      <section class="card__wrapper">
+        <div class="card">
+          <img src="./images/pizza-icon.jpg" alt="Icon of Pizza with a Slice" class="card__image">
+          <div class="card__content">
+            <h3>The finest ingredients</h3>
+            <p>Italian Joy Restaurant is a place that takes pride in the fresh ingredients that make up our tasty dishes.</p>
+            <a href="#" aria-label="Learn more about our finest ingredients" class="button">Learn More</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/delivery-icon.png" alt="Icon of a Delivery Scooter" class="card__image">
+          <div class="card__content">
+            <h3>The quickest delivery</h3>
+            <p>Order online today and have hot, fresh delicious Italian food delivered right to your front door</p>
+            <a href="#" aria-label="Learn more out online delivery service" class="button">Learn More</a>
+          </div>
+        </div>
+        <div class="card" >
+          <img src="./images/menu-icon.png" alt="Icon of a plate with a fork and knife" class="card__image visibility-none visibility-flex--md">
+          <div class="card__content">
+            <h3>The best menu</h3>
+            <p>Our menu of pasta, pizza and Italian cuisine handmade with love, from scratch, daily.</p>
+            <a href="#" aria-label="Learn more about our menu" class="button">Learn More</a>
+          </div>
+        </div>
+      </section>
+      <section class="ad visibility-block visibility-none--md">
+        <img src="./images/pizza_ad.jpg" alt="">
+        <div class="ad__content">
+          <h3>Large pizza with unlimited toppings</h3>
+          <p>$12.99</p>
+        </div>
+      </section>
+      <section class="location visibility-block visibility-none--md">
+        <h3>Our Locations</h3>
+        <img src="./images/map.jpg" alt="Map for location of Italian Joy Restaurant">
+      </section>
+      <section class="gallery-wrapper visibility-none">
+        <img class="gallery__item" src="./images/pizza-1.jpg" alt="Pizza">
+        <img class="gallery__item" src="./images/wine.jpg" alt="Wine glasses">
+        <img class="gallery__item" src="./images/pizza-2.jpg" alt="Pizza">
+        <img class="gallery__item" src="./images/charcuterie.jpg" alt="Charcuterie board">
+        <img class="gallery__item" src="./images/charcuterie.jpg" alt="Charcuterie board">
+        <img class="gallery__item" src="./images/pizza-2.jpg" alt="Pizza">
+        <img class="gallery__item" src="./images/wine.jpg" alt="Wine glasses">
+        <img class="gallery__item" src="./images/pizza-1.jpg" alt="Pizza">
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="mailing-list">
+        <h3>Join our mailing list</h3>
+        <form action="">
+          <label for="email">Email Address</label>
+          <input type="email" placeholder="Email Address" id="email">
+          <input type="submit" value="Sign Up" aria-label="Sign up to our mailing list">
+        </form>
+        <div>
+          <h3>Italian Joy Restaurant</h3>
+          <p>Now with 2 locations to Serve You</p>
+          <p>123 Nowhere Lane</p>
+          <p>Orlando, FL 32806</p>
+          <a href="tel:407-555-1234">(407) 555-1234</a>
+          <a href="mailto:info@italianjoy.com">info@italianjoy.com</a>
+        </div>
+        <div>
+          <p>456 Here’n There Lane</p>
+          <p>Casselberry, FL 32707</p>
+          <a href="tel:407-555-1234">(407) 555-1234</a>
+          <a href="mailto:cass@italianjoy.com">cass@italianjoy.com</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/f14f2eae29.js" crossorigin="anonymous"></script>
+  </body>
+</html>

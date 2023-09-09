@@ -1,13 +1,13 @@
 {
   "name": "adv-web_ex1",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "build": "webpack",
-    "start": "lite-server --no-open"
+    "start": "gulp",
+    "build": "gulp static",
+    "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",
@@ -21,21 +21,40 @@
   "homepage": "https://github.com/manuelosorio/adv-web_ex1#readme",
   "devDependencies": {
     "@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker",
+    "@types/gh-pages": "^3.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "autoprefixer": "^10.4.15",
+    "babelify": "^10.0.0",
     "browser-sync": "^2.29.3",
     "browser-sync-webpack-plugin": "^2.3.0",
+    "browserify": "^17.0.0",
     "css-loader": "^6.8.1",
+    "eslint": "^8.49.0",
+    "gh-pages": "^6.0.0",
     "glob": "^10.3.4",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-file": "^0.4.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^5.0.1",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss-loader": "^7.3.3",
     "purgecss-webpack-plugin": "^5.0.0",
     "remove-files-webpack-plugin": "^1.5.0",
     "sass-loader": "^13.3.2",
-    "style-loader": "^3.3.3",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "style-loader": "^3.3.3"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "css-mqpacker": "^7.0.0",
     "sass": "^1.66.1"
   }
 }

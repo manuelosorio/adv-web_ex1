@@ -1,6 +1,6 @@
-@use "../../variables"
+@use "../../variables/index"
 @use "../breakpoints/breakpoints" as bp
-@use "./display" as *
+@use "display" as *
 
 @each $property in $display
   .visibility-#{ $property }

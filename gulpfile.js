@@ -14,7 +14,7 @@ const packer = require("css-mqpacker");
 const purgeCSS = require('@fullhuman/postcss-purgecss');
 
 let config = {
-  cname: 'starter-kit.manuelosorio.me'
+  cname: ''
 }
 let paths ={
   styles: {

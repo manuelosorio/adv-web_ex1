@@ -11,3 +11,5 @@ remove-me.js.map
 comp-screeenshots/
 
 .DS_Store
+
+_dist/

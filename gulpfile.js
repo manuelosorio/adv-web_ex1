@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const clean = require("gulp-clean");
+const newer = require('gulp-newer');
 const { publish } = require('gh-pages');
 const sass = require("gulp-dart-sass");
 const postcss = require("gulp-postcss");
@@ -7,11 +8,10 @@ const plumber = require('gulp-plumber');
 const autoPrefixer = require("autoprefixer");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
-const browserify = require('browserify');
 const file = require('gulp-file');
-const glob = require('glob');
-const packer = require("css-mqpacker");
+const packer = require("@hail2u/css-mqpacker");
 const purgeCSS = require('@fullhuman/postcss-purgecss');
+
 
 let config = {
   cname: ''
@@ -70,10 +70,31 @@ function html() {
     // }))
     .pipe(gulp.dest(paths.html.dest))
 }
-function images() {
+
+
+
+async function  images() {
+  const gulpImagemin = await import('gulp-imagemin');
+
   return gulp
     .src(paths.images.src)
+    .pipe(newer(paths.images.dest))
+    .pipe(
+      gulpImagemin.default([
+        gulpImagemin.gifsicle({ interlaced: true }),
+        gulpImagemin.mozjpeg({ progressive: true }),
+        gulpImagemin.optipng({ optimizationLevel: 5 }),
+        gulpImagemin.svgo({
+          plugins: [
+            { removeViewBox: false },
+            { collapseGroups: true }
+          ]
+        })
+      ])
+
+    )
     .pipe(gulp.dest(paths.images.dest))
+    .pipe(browserSync.stream())
 }
 
 function cleanDist() {

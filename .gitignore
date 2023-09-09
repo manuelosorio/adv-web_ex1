@@ -13,3 +13,4 @@ comp-screeenshots/
 .DS_Store
 
 _dist/
+.publish/

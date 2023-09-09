@@ -1,13 +1,13 @@
 {
   "name": "adv-web_ex1",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "build": "webpack",
-    "start": "lite-server --no-open"
+    "start": "gulp",
+    "build": "gulp static",
+    "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",

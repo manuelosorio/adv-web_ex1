@@ -1,0 +1,1 @@
+{"version":3,"sources":["vendor.sass"],"names":[],"mappings":"AAAQ,yIAAA;AACA,uFAAA","file":"vendor.css","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Oswald:wght@200;400;700&display=swap')\r\n@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css')\r\n"]}

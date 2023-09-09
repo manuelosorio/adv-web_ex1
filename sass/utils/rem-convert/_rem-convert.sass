@@ -1,0 +1,5 @@
+@use "sass:math"
+@use  "../../variables"
+
+@function rem($px)
+  @return math.div($px, variables.$base-value) * 1rem

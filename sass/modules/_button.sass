@@ -1,0 +1,19 @@
+@use "../variables"
+.button
+  padding: .75em 2em
+  font: variables.$f-weight--regular 1.1rem/1.25 variables.$open-sans
+  color: variables.$c-white
+  background: variables.$c-red
+  cursor: pointer
+  transition: 200ms ease-in-out
+  &:hover
+    background: variables.$c-grey
+  &--outline
+    @extend .button
+    background: transparent
+    border: 3px solid variables.$c-silver
+    color: variables.$c-silver
+    &:hover
+      background: variables.$c-silver
+      color: variables.$c-black
+

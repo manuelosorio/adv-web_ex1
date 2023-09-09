@@ -30,8 +30,22 @@ let paths ={
     dest: "_dist/images"
   },
 }
-
+function html() {
+  return gulp
+    .src([
+      paths.html.src
+    ])
+    // .pipe(plumber({
+    //   errorHandler: function(err) {
+    //     console.log(err);
+    //     this.emit('end');
+    //   }
+    // }))
+    .pipe(gulp.dest(paths.html.dest))
+}
 function style() {
+  setTimeout(() => {
+  }, 5000);
   return gulp
     .src(paths.styles.src)
     .pipe(sourcemaps.init())
@@ -57,19 +71,7 @@ function style() {
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
 }
-function html() {
-  return gulp
-    .src([
-      paths.html.src
-    ])
-    // .pipe(plumber({
-    //   errorHandler: function(err) {
-    //     console.log(err);
-    //     this.emit('end');
-    //   }
-    // }))
-    .pipe(gulp.dest(paths.html.dest))
-}
+
 
 
 
@@ -114,9 +116,8 @@ function watch() {
 
 function ghPages() {
   gulp.src("./_dist/**/*")
-    .pipe(file('CNAME', config.cname))
-    .pipe(gulp.dest('./.publish'));
-
+      .pipe(file('CNAME', config.cname))
+      .pipe(gulp.dest('./.publish'));
   return publish(
     ".publish",
     {
@@ -130,20 +131,20 @@ function ghPages() {
         console.log(err)
       }
     }
-  );
+  )
 }
 
+exports.html = html
 exports.cleanDist = cleanDist
 exports.watch = watch
 exports.style = style
-exports.html = html
 exports.ghPages = ghPages
 
-let build = gulp.parallel([html, images], style);
-let buildWatch = gulp.series(gulp.parallel([html, images]), style, watch);
+let build = gulp.parallel(html, gulp.parallel([style, images]));
+let buildWatch = gulp.series(html, gulp.parallel([style, images]), watch);
 let staticBuild = gulp.series(cleanDist, build)
 
 gulp.task('default', gulp.series(cleanDist, buildWatch))
 gulp.task('static', gulp.series(staticBuild))
 // scriptsMinify
-gulp.task('deploy', gulp.series(staticBuild, ghPages));
+gulp.task('deploy', gulp.series(staticBuild, style, ghPages ));

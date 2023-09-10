@@ -46,8 +46,10 @@ img {
   overflow: hidden;
 }
 .skip-navigation:focus {
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1rem;
@@ -69,8 +71,10 @@ nav ul {
 a {
   display: block;
   padding: 1rem;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   text-decoration: none;
@@ -348,6 +352,7 @@ a:hover {
     flex-basis: 15%;
   }
   .nav__group--right, .nav__links {
+    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     flex-direction: row;
@@ -356,16 +361,20 @@ a:hover {
   }
   .nav__links {
     flex-direction: row;
+    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
   .nav__links li {
     top: 0;
     transition: none;
+    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     position: relative;

@@ -1,0 +1,16 @@
+@use "../utils"
+@use "../variables"
+.gallery
+  &-wrapper
+    background-color: variables.$c-black
+    flex-wrap: wrap
+    gap: 0
+    width: 100%
+  &__item
+    width: 50%
+    opacity: 0.7
+    transition: opacity 200ms ease-in-out
+    &:hover
+      opacity: 1
+    +utils.breakpoint-min('lg')
+      width: 25%

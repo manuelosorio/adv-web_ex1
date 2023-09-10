@@ -268,6 +268,21 @@ a:hover {
   margin: auto;
   text-align: center;
 }
+
+.gallery-wrapper {
+  background-color: #303030;
+  flex-wrap: wrap;
+  gap: 0;
+  width: 100%;
+}
+.gallery__item {
+  width: 50%;
+  opacity: 0.7;
+  transition: opacity 200ms ease-in-out;
+}
+.gallery__item:hover {
+  opacity: 1;
+}
 @media (min-width: 480px) {
   .ad {
     height: 20rem;
@@ -279,6 +294,9 @@ a:hover {
   }
 }
 @media (min-width: 768px) {
+  .visibility-flex--md {
+    display: flex;
+  }
   .visibility-grid--md {
     display: grid;
   }
@@ -357,6 +375,9 @@ a:hover {
   .nav__social li {
     top: 0;
     transition: none;
+  }
+  .gallery__item {
+    width: 25%;
   }
 }
 @media (max-width: 992px) {

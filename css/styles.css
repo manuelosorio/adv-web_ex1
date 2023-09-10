@@ -5,6 +5,10 @@
   display: block;
 }
 
+.visibility-flex {
+  display: flex;
+}
+
 .visibility-none {
   display: none;
 }
@@ -140,7 +144,7 @@ a:hover {
   top: -600px;
   transition: 300ms ease-in-out;
 }
-.button, .hero__cta {
+.button, .card__cta, .hero__cta {
   padding: 0.75em 2em;
   font: 400 1.1rem/1.25 "Open Sans", sans-serif;
   color: #fcfcfc;
@@ -148,7 +152,7 @@ a:hover {
   cursor: pointer;
   transition: 200ms ease-in-out;
 }
-.button:hover, .hero__cta:hover {
+.button:hover, .card__cta:hover, .hero__cta:hover {
   background: #575757;
 }
  .hero__cta {
@@ -159,6 +163,16 @@ a:hover {
  .hero__cta:hover {
   background: #EDEDED;
   color: #303030;
+}
+ .card__cta {
+  background: transparent;
+  border: none;
+  color: #303030;
+  text-decoration: underline;
+}
+ .card__cta:hover {
+  background: transparent;
+  color: #E74C3C;
 }
 
 .hero {
@@ -198,10 +212,30 @@ a:hover {
 .hero__cta {
   margin-block-start: 3.5rem;
 }
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem auto;
+  gap: 2%;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.card {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-basis: 48%;
+}
+.card__cta {
+  margin: auto;
+  text-align: center;
+}
 @media (min-width: 768px) {
-  .visibility-flex--md {
-    display: flex;
-  }
   .visibility-none--md {
     display: none;
   }
@@ -218,8 +252,14 @@ a:hover {
   .hero__price {
     --priceSize: 5.625rem;
   }
+  .card {
+    flex-basis: 31%;
+  }
 }
 @media (min-width: 992px) {
+  .visibility-flex--lg {
+    display: flex;
+  }
   .visibility-none--lg {
     display: none;
   }

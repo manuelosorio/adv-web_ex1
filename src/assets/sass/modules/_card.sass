@@ -1,0 +1,26 @@
+@use "../variables"
+@use "../utils"
+@use "button"
+
+.cards-wrapper
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  margin: 4rem auto
+  gap: 2%
+  width: 90%
+  max-width: 1200px
+
+.card
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  text-align: center
+  flex-basis: 48%
+  +utils.breakpoint-min('md')
+    flex-basis: 31%
+  &__cta
+    @extend .button--underline
+    margin: auto
+    text-align: center

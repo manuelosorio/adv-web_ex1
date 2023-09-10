@@ -3,24 +3,29 @@
 @use "button"
 
 .cards-wrapper
-  display: flex
-  flex-wrap: wrap
+  display: grid
   justify-content: center
-  align-items: center
+  justify-self: center
+  align-items: stretch
   margin: 4rem auto
   gap: 2%
   width: 90%
   max-width: 1200px
+  grid-template-columns: repeat(2, 1fr)
+  +utils.breakpoint-min('md')
+    grid-template-columns: repeat(3, 1fr)
 
 .card
-  flex-direction: column
-  justify-content: space-between
+  justify-content: center
   align-items: center
   text-align: center
-  flex-basis: 48%
-  +utils.breakpoint-min('md')
-    flex-basis: 31%
+  justify-items: center
+  //align-self: baseline
+  grid-template-rows: 1fr 2fr
   &__cta
     @extend .button--underline
     margin: auto
     text-align: center
+  &__content
+    +utils.breakpoint-min('md')
+      max-width: 35ch

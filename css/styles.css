@@ -213,6 +213,38 @@ a:hover {
   margin-block-start: 3.5rem;
 }
 
+.ad {
+  position: relative;
+  background-color: #303030;
+  overflow: hidden;
+  height: 18rem;
+}
+.ad img {
+  position: relative;
+  opacity: 0.75;
+  width: 125%;
+  left: -15%;
+  max-width: initial;
+}
+.ad__content {
+  color: #fcfcfc;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-65%, -50%);
+  margin: 0;
+  text-align: center;
+}
+.ad__content h3 {
+  font: 200 2.875rem/1.5 "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.ad__content span {
+  font-size: 3.0625rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
 .cards-wrapper {
   display: grid;
   justify-content: center;
@@ -236,7 +268,20 @@ a:hover {
   margin: auto;
   text-align: center;
 }
+@media (min-width: 480px) {
+  .ad {
+    height: 20rem;
+  }
+}
+@media (min-width: 650px) {
+  .ad {
+    height: 28rem;
+  }
+}
 @media (min-width: 768px) {
+  .visibility-grid--md {
+    display: grid;
+  }
   .visibility-none--md {
     display: none;
   }
@@ -261,9 +306,6 @@ a:hover {
   }
 }
 @media (min-width: 992px) {
-  .visibility-grid--lg {
-    display: grid;
-  }
   .visibility-none--lg {
     display: none;
   }

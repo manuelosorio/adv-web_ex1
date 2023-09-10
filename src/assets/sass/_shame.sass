@@ -1,0 +1,20 @@
+@use "variables"
+@use "utils"
+// any code that isn't being put into a module
+// or is a hack should in the box of shame
+// --------------------------------------------------
+.location
+  h3
+    background-color: variables.$c-green
+    $headingSize: +utils.rem(60)
+    --headingSize: #{$headingSize}
+    font: variables.$f-weight--light var(--headingSize)/1 variables.$oswald
+    margin-block-start: 1rem
+    margin-block-end: 0
+    text-align: center
+    padding: 1rem
+
+
+
+
+// --------------------------------------------------

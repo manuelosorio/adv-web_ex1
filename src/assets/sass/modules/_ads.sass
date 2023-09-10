@@ -1,0 +1,35 @@
+@use "../variables"
+@use "../utils"
+
+.ad
+  position: relative
+  background-color: rgba(variables.$c-black, 1)
+  overflow: hidden
+  height: 18rem
+  +utils.breakpoint-min('xs')
+    height: 20rem
+  +utils.breakpoint-min(650px)
+    height: 28rem
+  img
+    position: relative
+    opacity: 0.75
+    width: 125%
+    left: -15%
+    max-width: initial
+  &__content
+    color: variables.$c-white
+    position: absolute
+    top: 50%
+    left: 80%
+    transform: translate(-65%, -50%)
+    margin: 0
+    text-align: center
+    h3
+      font: variables.$f-weight--extra-light 2.875rem/1.5 variables.$oswald
+      text-transform: uppercase
+    span
+      font:
+        size: 3.0625rem
+        weight: variables.$f-weight--bold
+      line-height: 1.2
+      //margin-block: 0

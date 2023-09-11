@@ -1,0 +1,107 @@
+@use "../variables"
+@use "../utils"
+.footer
+  display: flex
+  flex-direction: column
+  background-color: #000
+  padding: 2rem 1rem
+  color: variables.$c-grey
+  +utils.breakpoint-min('md')
+    flex-direction: row
+    justify-content: center
+    gap: 3rem
+    align-items: start
+    padding-block-start: 2rem
+    padding-block-end: 2rem
+    padding-inline-start: 2rem
+    padding-inline-end: 2rem
+  a
+    color: variables.$c-grey
+  &__container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    justify-content: center
+    order: 1
+    +utils.breakpoint-min('md')
+      display: flex
+      flex-direction: column
+      justify-content: center
+      order: 2
+  &__info-block
+    grid-column: 1 / -1
+    text-align: center
+    text-transform: uppercase
+  &__title
+    margin: 0
+    $titleSize: utils.rem(62)
+    --titleSize: #{$titleSize}
+    font: variables.$f-weight--light var(--titleSize)/1.1 variables.$oswald
+  &__subtitle
+    margin-block-start: 0
+    margin-block-end: 1rem
+    $subtitleSize: utils.rem(20)
+    --subtitleSize: #{$subtitleSize}
+    font: variables.$f-weight--light var(--subtitleSize)/1.2 variables.$open-sans
+  &__address-block
+    display: flex
+    flex-direction: column
+    justify-content: center
+    p, * + *
+      text-align: center
+      margin: 0 auto
+      padding: 0
+    + .footer__address-block
+      +utils.breakpoint-min('md')
+        margin-block-start: 1rem
+  &__mailing-list
+    flex-grow: 1
+    order: 2
+    &:before
+      content: ''
+      display: block
+      width: 75%
+      height: 3px
+      background-color: variables.$c-grey
+      margin: 2rem auto
+    h3
+      margin: 0
+      $titleSize: utils.rem(28)
+      --titleSize: #{$titleSize}
+      $titleWeight: variables.$f-weight--light
+      --titleWeight: #{$titleWeight}
+      font: var(--titleWeight) var(--titleSize)/1.2 variables.$oswald
+      text-align: center
+    +utils.breakpoint-min('md')
+      flex-grow: 0
+      flex-basis: 40%
+      order: 1
+      &:before
+        display: none
+      h3
+        $titleSize: utils.rem(32)
+        --titleSize: #{$titleSize}
+        $titleWeight: variables.$f-weight--regular
+        --titleWeight: #{$titleWeight}
+        line-height: 2
+        text-align: left
+    input
+      padding: 0.5em 1.25em
+  form
+    display: flex
+    justify-content: stretch
+    gap: 1rem
+  &__email-input
+    background-color: variables.$c-silver
+    border: none
+    margin-block-start: 1rem
+    flex-grow: 1
+    +utils.breakpoint-min('md')
+      margin-block-start: 0
+  &__submit-input
+    background-color: variables.$c-grey
+    color: variables.$c-silver
+    border: none
+    margin-block-start: 1rem
+    +utils.breakpoint-min('md')
+      margin-block-start: 0
+      margin-inline-start: 1rem

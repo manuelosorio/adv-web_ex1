@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
     <title>Manuel Osorio - Mobile First</title>
+    <script src="https://kit.fontawesome.com/f14f2eae29.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <a href="#header" class="skip-navigation">Skip to Header</a>
@@ -100,30 +101,33 @@
         <img class="gallery__item" src="./images/pizza-1.jpg" alt="Pizza">
       </section>
     </main>
-    <footer id="footer">
-      <div class="mailing-list">
-        <h3>Join our mailing list</h3>
-        <form action="">
-          <label for="email">Email Address</label>
-          <input type="email" placeholder="Email Address" id="email">
-          <input type="submit" value="Sign Up" aria-label="Sign up to our mailing list">
-        </form>
-        <div>
-          <h3>Italian Joy Restaurant</h3>
-          <p>Now with 2 locations to Serve You</p>
-          <p>123 Nowhere Lane</p>
-          <p>Orlando, FL 32806</p>
-          <a href="tel:407-555-1234">(407) 555-1234</a>
-          <a href="mailto:info@italianjoy.com">info@italianjoy.com</a>
+    <footer class="footer" id="footer">
+      <div class="footer__container">
+        <div class="footer__info-block">
+          <h3 class="footer__title">Italian Joy <span class="visibility-none visibility-block--md">Restaurant</span></h3>
+          <p class="footer__subtitle">Now with 2 locations <span class="visibility-none visibility-initial--md">to Serve You</span></p>
         </div>
-        <div>
-          <p>456 Here’n There Lane</p>
-          <p>Casselberry, FL 32707</p>
-          <a href="tel:407-555-1234">(407) 555-1234</a>
-          <a href="mailto:cass@italianjoy.com">cass@italianjoy.com</a>
+        <div class="footer__address-block">
+          <p class="footer__address">123 Nowhere Lane</p>
+          <p class="footer__city">Orlando, FL 32806</p>
+          <a href="tel:407-555-1234"  class="footer__phone">(407) 555-1234</a>
+          <a href="mailto:info@italianjoy.com" class="footer_email">info@italianjoy.com</a>
+        </div>
+        <div class="footer__address-block">
+          <p class="footer__address">456 Here’n There Lane</p>
+          <p class="footer__city">Casselberry, FL 32707</p>
+          <a href="tel:407-555-1234" class="footer__phone">(407) 555-1234</a>
+          <a href="mailto:cass@italianjoy.com" class="footer_email">cass@italianjoy.com</a>
         </div>
       </div>
+      <div class="footer__mailing-list">
+        <h3>Join our mailing list</h3>
+        <form>
+<!--          <label for="email">Email Address</label>-->
+          <input type="email" placeholder="Email Address" id="email" aria-label="Email Address" class="footer__email-input">
+          <input type="submit" value="Sign Up" aria-label="Sign up to our mailing list" class="footer__submit-input">
+        </form>
+      </div>
     </footer>
-    <script src="https://kit.fontawesome.com/f14f2eae29.js" crossorigin="anonymous"></script>
   </body>
 </html>

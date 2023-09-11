@@ -361,6 +361,7 @@ a:hover {
   border: none;
   margin-block-start: 1rem;
   flex-grow: 1;
+  width: 75%;
 }
 .footer__submit-input {
   background-color: #575757;
